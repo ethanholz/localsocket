@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Ethan Holz <ethan.holz@omsf.io>"]
+channels = ["conda-forge"]
+name = "localsocket"
+platforms = ["osx-arm64", "linux-aarch64"]
+version = "0.1.0"
+
+[tasks]
+build = {cmd = "go build .", env = {"CGO_ENABLED"="0"}}
+
+[dependencies]
+go = ">=1.26.3,<2"
